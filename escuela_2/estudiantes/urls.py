@@ -3,6 +3,6 @@ from estudiantes import views
 
 urlpatterns = [
     path('' , views.Estudiantes),
-    path('<int:id>/' , views.DetalleEstudiante)
+    path('<int:id>/' , views.DetalleEstudiante),
 ]
 

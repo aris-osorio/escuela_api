@@ -7,7 +7,7 @@ class EstudianteSerializer(serializers.ModelSerializer):
         model = Estudiante
         fields = '__all__'
 
-class ListaClasesSerializer(serializers.ModelSerializer):
+class ListaClaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = ListaClases
         fields = '__all__'

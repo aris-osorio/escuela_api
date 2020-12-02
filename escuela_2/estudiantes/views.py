@@ -2,7 +2,9 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from estudiantes.models import Estudiante
+from estudiantes.models import ListaClases
 from estudiantes.serializers import EstudianteSerializer
+from estudiantes.serializers import ListaClaseSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -18,6 +20,7 @@ def Estudiantes(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def DetalleEstudiante(request, id):
